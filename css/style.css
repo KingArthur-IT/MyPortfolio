@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Roboto+Slab&family=Russo+One&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -44,7 +45,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -81,7 +83,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -228,7 +231,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -262,7 +266,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -338,10 +343,95 @@ template {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header {
   width: 100%;
-  height: 100px;
+  height: 100vh;
+  background: url(../img/main.jpg) center no-repeat;
+  background-size: cover;
 }
+.header__main-info {
+  font-family: "Russo One", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: rgba(193, 200, 199, 0.5);
+  height: auto;
+  max-width: 740px;
+  margin: auto;
+  margin-top: 70px;
+  padding: 40px 60px;
+}
+.header__title {
+  display: block;
+  font-size: 80px;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+.header__line {
+  display: block;
+  background-color: #E29049;
+  height: 5px;
+  width: 400px;
+  max-width: 400px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: 15px;
+}
+.header__subtitle {
+  display: block;
+  color: #252B31;
+  font-size: 48px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+.nav-bar__btn {
+  height: 100%;
+  width: 60px;
+  background-color: #C1C8C7;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+.nav-bar__btn:active, .nav-bar__btn:focus {
+  outline: 0;
+}
+
+.menu-btn-line {
+  background-color: #ffffff;
+  height: 2px;
+  width: 40px;
+}/*# sourceMappingURL=style.css.map */
