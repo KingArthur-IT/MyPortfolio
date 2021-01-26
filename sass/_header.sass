@@ -4,8 +4,8 @@
     height: 100vh
     background: url(../img/main.jpg) center no-repeat
     background-size: cover
+    font-family: 'Russo One', sans-serif
     &__main-info
-        font-family: 'Russo One', sans-serif
         display: flex
         flex-direction: column
         text-align: center
@@ -39,11 +39,9 @@
         padding: 0
         margin: 0
 .nav-bar
-    display: block
+    display: flex
     width: 100%
-    //background-color: rgba($first, 0.5)
     height: 60px
-    //border-bottom: 1px solid #fff
     &__btn
         height: 100%
         width: 60px
@@ -55,9 +53,32 @@
         flex-direction: column
         justify-content: space-around
         padding: 10px
+        z-index: 50
         &:active, &:focus
             outline: 0
 .menu-btn-line
     background-color: #ffffff
     height: 2px
     width: 40px
+    top: 30px
+    transition: all 1s ease-in-out
+.menu
+    width: 0%
+    height: 100%
+    background-color: rgba($first, 0.5)
+    border-bottom: 1px solid #fff
+    transition: all 1.5s cubic-bezier(0.52, 1.64, 0.35, 0.66)
+    transition-delay: 1s
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &__item
+        display: block
+        color: #fff
+        text-transform: uppercase
+        font-size: 0px
+        cursor: pointer
+        transition: font-size 0.5s ease-in-out
+        transition-delay: 1s
+        &:hover
+            color: $third

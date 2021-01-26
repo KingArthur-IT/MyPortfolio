@@ -357,9 +357,9 @@ template {
   height: 100vh;
   background: url(../img/main.jpg) center no-repeat;
   background-size: cover;
+  font-family: "Russo One", sans-serif;
 }
 .header__main-info {
-  font-family: "Russo One", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,7 +404,9 @@ template {
 }
 
 .nav-bar {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 60px;
 }
@@ -425,6 +427,7 @@ template {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 10px;
+  z-index: 50;
 }
 .nav-bar__btn:active, .nav-bar__btn:focus {
   outline: 0;
@@ -434,4 +437,40 @@ template {
   background-color: #ffffff;
   height: 2px;
   width: 40px;
+  top: 30px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.menu {
+  width: 0%;
+  height: 100%;
+  background-color: rgba(193, 200, 199, 0.5);
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all 1.5s cubic-bezier(0.52, 1.64, 0.35, 0.66);
+  transition: all 1.5s cubic-bezier(0.52, 1.64, 0.35, 0.66);
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu__item {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0px;
+  cursor: pointer;
+  -webkit-transition: font-size 0.5s ease-in-out;
+  transition: font-size 0.5s ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.menu__item:hover {
+  color: #E29049;
 }/*# sourceMappingURL=style.css.map */
