@@ -2,20 +2,20 @@ $(document).ready(function () {
     $('.nav-bar__btn').on('click', function () {
         let angle = '30deg', top_end = '59px', top_start = '30px', textsize = '25px',
             width_min = '40px', width_max = '60px', left_start = '10px'
-        if ($(window).width() < 740)
+        if ($(window).width() < 741)
         {
             angle = '15deg'; top_end = '39px'; textsize = '18px'; top_start = '19px';
         };
-        if ($(window).width() < 500)
+        if ($(window).width() < 501)
         {
             angle = '18deg'; top_end = '39px'; textsize = '14px'; top_start = '19px';
             width_min = '30px'; width_max = '40px'; left_start = '5px';
         }
-        if ($(window).width() < 350)
+        if ($(window).width() < 351)
         {
             textsize = '12px';
         }
-        //alert()
+        //alert($(window).width())
         if ($(this).attr('clicked') == 'false') {
             //Присвоить кнопке аттрибут
             $(this).attr('clicked', 'true');
@@ -50,3 +50,40 @@ $(document).ready(function () {
         }
     })//onclick
 })
+
+//При изменении размеров окна отрегулировать меню
+$(window).resize(function(){
+    let angle = '30deg', top_end = '59px', top_start = '30px', textsize = '25px',
+            width_min = '40px', width_max = '60px', left_start = '10px'
+        if ($(window).width() < 741)
+        {
+            angle = '15deg'; top_end = '39px'; textsize = '18px'; top_start = '19px';
+        };
+        if ($(window).width() < 501)
+        {
+            angle = '18deg'; top_end = '39px'; textsize = '14px'; top_start = '19px';
+            width_min = '30px'; width_max = '40px'; left_start = '5px';
+        }
+        if ($(window).width() < 351)
+        {
+            textsize = '12px';
+        }
+        //alert($(window).width())
+        if ($('.nav-bar__btn').attr('clicked') == 'true') {
+            //Исправляем поворот стрелки
+            $('.menu-btn-line:nth-child(1)').css('transform', 'rotate('+angle+')');
+            $('.menu-btn-line:nth-child(3)').css('transform', 'rotate(-'+angle+')');
+            //Положение средней полоски
+            $('.menu-btn-line:nth-child(2)').css('top', top_end);
+            $('.menu-btn-line:nth-child(2)').css('width', width_max);
+            //Шрифт меню
+            $('.menu__item').css('font-size', textsize);
+        }
+        else
+        {
+            //Средняя полоска
+            $('.menu-btn-line:nth-child(2)').css('top', top_start);
+            $('.menu-btn-line:nth-child(2)').css('width', width_min);
+            $('.menu-btn-line:nth-child(2)').css('left', left_start);
+        }
+});
