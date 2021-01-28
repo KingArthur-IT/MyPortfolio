@@ -690,6 +690,8 @@ template {
 .tech-animation__img {
   display: block;
   width: 100px;
+  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+          transform: rotate3d(0, 0, 1, 0deg);
   margin: auto;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

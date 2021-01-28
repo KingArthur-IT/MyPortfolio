@@ -1,6 +1,7 @@
+//Меню
 $(document).ready(function () {
     $('.nav-bar__btn').on('click', function () {
-        let angle = '30deg', top_end = '59px', top_start = '30px', textsize = '25px',
+        let angle = '30deg', top_end = '59px', top_start = '29px', textsize = '25px',
             width_min = '40px', width_max = '60px', left_start = '10px'
         if ($(window).width() < 741)
         {
@@ -15,7 +16,6 @@ $(document).ready(function () {
         {
             textsize = '12px';
         }
-        //alert($(window).width())
         if ($(this).attr('clicked') == 'false') {
             //Присвоить кнопке аттрибут
             $(this).attr('clicked', 'true');
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
 //При изменении размеров окна отрегулировать меню
 $(window).resize(function(){
-    let angle = '30deg', top_end = '59px', top_start = '30px', textsize = '25px',
+    let angle = '30deg', top_end = '59px', top_start = '29px', textsize = '25px',
             width_min = '40px', width_max = '60px', left_start = '10px'
         if ($(window).width() < 741)
         {
@@ -87,3 +87,61 @@ $(window).resize(function(){
             $('.menu-btn-line:nth-child(2)').css('left', left_start);
         }
 });
+
+//Анимация технологий
+$(document).ready(function () {
+    let fan_animation;
+    let tech_animation = [];
+    
+    $('.tech-animation__img').on('click', function () {
+        if ($(this).attr('clicked') == 'false')
+        {
+            $(this).attr('clicked', 'true'); //Присвоить аттрибут кнопке
+            fan_animation = document.getElementById("fan").animate(
+                { transform: 'rotate3d(0,0,1,-360deg)' },
+                {
+                    duration: 500,
+                    iterations: 100
+                }
+            )//animate
+            technologiesAnimationStart();
+        }//if
+        else {
+            $(this).attr('clicked', 'false');
+            fan_animation.cancel();
+            technologiesAnimationStop();
+        }
+    })//click    
+    
+    function technologiesAnimationStart() {
+        let len = document.getElementsByClassName('tech-list__item').length;
+        for (let i = 1; i <= len; i++)
+        {
+            let id = "tech-item-" + i;
+            let t = document.getElementById(id).offsetTop;
+            let r = Math.random() * 20;
+            if (r < 5)
+                r = 5;
+            tech_animation[i - 1] = document.getElementById(id).animate(
+            [
+                { top: t - r + 'px' },
+                { top: t + 'px' },
+                { top: t + r + 'px' }
+            ],
+            {
+                duration: Math.abs(r) *  100,
+                iterations: 100,
+                direction: 'alternate-reverse',
+                easing: 'ease-in-out',
+                delay: 500
+            }
+            )//animate
+        }//for
+    }//function technologiesAnimation()
+    function technologiesAnimationStop() {
+        let len = document.getElementsByClassName('tech-list__item').length;
+        for (let i = 1; i <= len; i++) {
+            tech_animation[i - 1].cancel();
+        }//for
+    }//technologiesAnimationStop
+})//ready
