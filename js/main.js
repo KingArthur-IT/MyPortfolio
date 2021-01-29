@@ -124,12 +124,13 @@ $(document).ready(function () {
                 r = 5;
             tech_animation[i - 1] = document.getElementById(id).animate(
             [
-                { top: t - r + 'px' },
                 { top: t + 'px' },
-                { top: t + r + 'px' }
+                { top: t + r + 'px' },
+                { top: t + 'px' },
+                { top: t - r + 'px' }
             ],
             {
-                duration: Math.abs(r) *  100,
+                duration: Math.abs(r) *  200,
                 iterations: 100,
                 direction: 'alternate-reverse',
                 easing: 'ease-in-out',

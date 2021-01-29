@@ -33,6 +33,10 @@
         max-width: 400px
         align-self: center
         margin-bottom: 15px
+        opacity: 0
+        transition: all 1.2s ease-in-out
+        &.anim-active
+            opacity: 1
     &__subtitle
         display: block
         color: $second
@@ -40,6 +44,13 @@
         font-weight: normal
         padding: 0
         margin: 0
+        transform: translateY(-30px)
+        opacity: 0
+        transition: all 1s ease-in-out
+        transition-delay: 1.2s
+        &.anim-active
+            transform: translateY(0px)
+            opacity: 1
 .nav-bar
     display: flex
     width: 100%
