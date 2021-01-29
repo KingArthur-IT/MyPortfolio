@@ -8,20 +8,20 @@
     <title>Portfolio | Artem Ostapenko</title>
 </head>
 <body>
+    <div class="nav-bar">
+        <button class="nav-bar__btn" clicked="false">
+            <div class="menu-btn-line"></div>
+            <div class="menu-btn-line"></div>
+            <div class="menu-btn-line"></div>
+        </button>
+        <nav class="menu">
+            <div class="menu__item">О себе</div>
+            <div class="menu__item">Оффер</div>
+            <div class="menu__item">Кейсы</div>
+            <div class="menu__item">Контакты</div>
+        </nav>
+    </div>
     <header class = "header">
-        <div class = "nav-bar">
-            <button class = "nav-bar__btn" clicked = "false">
-                <div class="menu-btn-line"></div>
-                <div class="menu-btn-line"></div>
-                <div class="menu-btn-line"></div>
-            </button>
-            <nav class="menu">
-                <div class="menu__item">О себе</div>
-                <div class="menu__item">Оффер</div>
-                <div class="menu__item">Кейсы</div>
-                <div class="menu__item">Контакты</div>
-            </nav>
-        </div>
         <div class = "header__main-info">
             <h1 class = "header__title">Артем Остапенко</h1>
             <div class = "anim-item header__line"></div>
@@ -73,6 +73,10 @@
                 <img src="./img/Stack.jpg" alt="" class = "technologies-md__img">
             </div>
         </div>
+    </section>
+    <section class = "section colored-sect">
+        <h1 class="title">Что я могу Вам предложить?</h1>
+        <div class="anim-item title-underline"></div>
     </section>
     <script src="./js/jQuery.js"></script>
     <script src="./js/main.js"></script>
