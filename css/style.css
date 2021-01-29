@@ -752,6 +752,7 @@ template {
       flex-basis: 90%;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 24px;
+  font-weight: 900;
   color: #252B31;
   list-style: none;
   position: relative;
@@ -763,38 +764,47 @@ template {
 .tech-list__item:nth-child(1) {
   left: 5%;
   top: 5%;
+  color: green;
 }
 .tech-list__item:nth-child(2) {
   left: 70%;
   top: 10%;
+  color: gold;
 }
 .tech-list__item:nth-child(3) {
   left: 35%;
   top: 0%;
+  color: magenta;
 }
 .tech-list__item:nth-child(4) {
   left: 55%;
   top: 20%;
+  color: gray;
 }
 .tech-list__item:nth-child(5) {
   left: 10%;
   top: 40%;
+  color: blue;
 }
 .tech-list__item:nth-child(6) {
   left: 75%;
   top: 45%;
+  color: hotpink;
 }
 .tech-list__item:nth-child(7) {
   left: 40%;
   top: 65%;
+  color: brown;
 }
 .tech-list__item:nth-child(8) {
   left: 20%;
   top: 90%;
+  color: cadetblue;
 }
 .tech-list__item:nth-child(9) {
   left: 60%;
   top: 92%;
+  color: coral;
 }
 .tech-list__item:hover {
   color: #E29049;
