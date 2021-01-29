@@ -90,6 +90,7 @@
     &__img
         width: 100%
         display: block
+
 @media screen and ( max-width:  950px)
     .about-me-wrap
         flex-direction: column
@@ -99,3 +100,28 @@
         display: block
     .about-me-sect__info
         margin-bottom: 15px
+
+@media screen and ( max-width: 750px )
+    .about-me-list
+        margin-left: 0px
+        &__item
+            &:nth-child(2)
+                margin-left: 20px
+            &:nth-child(3)
+                margin-left: 40px
+
+@media screen and ( max-width: 650px )
+    .about-me-list
+        font-size: 20px
+        &__item
+            margin-bottom: 10px
+
+@media screen and ( max-width: 550px )
+    .about-me-list__item
+        &:nth-child(2)
+            margin-left: 0px
+        &:nth-child(3)
+            margin-left: 0px
+@media screen and ( max-width: 450px )
+    .about-me-list
+        font-size: 16px
