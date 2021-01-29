@@ -736,7 +736,7 @@ template {
   background-size: cover;
   font-family: "Russo One", sans-serif;
   padding-bottom: 100px;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 .header__main-info {
   display: -webkit-box;
