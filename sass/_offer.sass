@@ -11,13 +11,11 @@
         background: $third
         display: block
         transform: perspective(1px) translateZ(0)
-        font-size: 36px
+        font-size: 24px
         font-weight: 900
         padding: 20px
         padding-top: 40px
-        transition: color 0.3s ease-in-out
-        transition: font-size 0.3s ease-in-out
-        overflow: hidden
+        transition: transform 1s ease-in-out
         &:before
             content: ''//attr(data-content)
             position: absolute
@@ -49,7 +47,10 @@
     background-color: #fff
     margin-top: 15px
 .item-description
-    font-size: 20px
+    font-size: 18px
     font-weight: normal
     &:hover
         color: #fff
+@media screen and ( max-width:  850px)
+    .sites-wrapper
+        flex-direction: column
