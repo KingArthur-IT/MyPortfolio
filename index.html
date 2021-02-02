@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
     <title>Portfolio | Artem Ostapenko</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <nav class="menu">
             <div class="menu__item"><a href="#about-me" class="menu-link">О себе</a></div>
             <div class="menu__item"><a href="#offer" class="menu-link">Оффер</a></div>
-            <div class="menu__item"><a href="#0" class="menu-link">Кейсы</a></div>
+            <div class="menu__item"><a href="#cases" class="menu-link">Кейсы</a></div>
             <div class="menu__item"><a href="#0" class="menu-link">Контакты</a></div>
         </nav>
     </div>
@@ -79,21 +80,21 @@
         <div class="anim-item title-underline"></div>
         <h3 class="wrapper-title">Создание веб-сайтов различной сложности</h3>
         <div class="sites-wrapper">
-            <div class="sites-wrapper__item">
+            <div class="anim-item sites-wrapper__item">
                 <div class = "item-title">Landing Page</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
                     Веб-страница, основной задачей которой является целевое действие: сбор контактных данных целевой аудитории, подписка, реклама продукта, его покупка.
                 </p>
             </div>
-            <div class="sites-wrapper__item">
+            <div class="anim-item sites-wrapper__item">
                 <div class="item-title">Сайт визитка</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
                     Отличное решение для правильного позиционирования Вашего бренда.
                 </p>
             </div>
-            <div class="sites-wrapper__item">
+            <div class="anim-item sites-wrapper__item">
                 <div class="item-title">Доработка сайта</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
@@ -103,7 +104,7 @@
         </div>
         <h3 class="wrapper-title">Что включает в себя сайт?</h3>
         <div class="sites-wrapper">
-            <div class="sites-wrapper__item">
+            <div class="anim-item sites-wrapper__item">
                 <div class="item-title">Адаптивность</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
@@ -111,14 +112,14 @@
                     подписка, реклама продукта, его покупка.
                 </p>
             </div>
-            <div class="sites-wrapper__item">
+            <div class="anim-item sites-wrapper__item">
                 <div class="item-title">Кроссбраузерность</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
                     Отличное решение для правильного позиционирования Вашего бренда.
                 </p>
             </div>
-            <div class="sites-wrapper__item">
+            <div class="anim-item sites-wrapper__item">
                 <div class="item-title">Анимация</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
@@ -127,9 +128,38 @@
             </div>
         </div>
     </section>
+    <section class="section" id = "cases">
+        <h1 class="title">Последние проекты</h1>
+        <div class="anim-item title-underline"></div>        
+        <div class="case">
+            <h3 class="case__title">Сайт кафедры высшей и прикладной математики ГВУЗ “ПГТУ”</h3>
+            <div class="slider-wrap">
+                <div class="case__slider">   
+                    <div class = "preview">
+                        <ul class="cases-list">Объем выполненной работы:
+                            <li class="cases-list__item"><i class="fas fa-project-diagram list-icon"></i>прототипирование</li>
+                            <li class="cases-list__item"><i class="fas fa-brush list-icon"></i>дизайн</li>
+                            <li class="cases-list__item"><i class="fas fa-code list-icon"></i>верстка</li>
+                            <li class="cases-list__item"><i class="fas fa-code-branch list-icon"></i>адаптивность и программирование</li>
+                            <li class="cases-list__item"><i class="fab fa-wordpress list-icon"></i>посадка на Wordpress</li>
+                        </ul>
+                        <img src="./img/pstu-preview/kvpm-0.jpg" alt="kvpm-0" class="preview__img">                    
+                    </div>          
+                    <img src="./img/pstu-preview/kvpm-1.jpg" alt="kvpm-1" class = "case__img">
+                    <img src="./img/pstu-preview/kvpm-2.jpg" alt="kvpm-2" class = "case__img">
+                    <img src="./img/pstu-preview/kvpm-3.jpg" alt="kvpm-2" class="case__img">
+                    <img src="./img/pstu-preview/kvpm-4.jpg" alt="kvpm-2" class="case__img">
+                    <img src="./img/pstu-preview/kvpm-6.jpg" alt="kvpm-2" class="case__img">
+                </div>
+                <img src="./img/back.png" alt="" class="slider-btn back-btn">
+                <img src="./img/next.png" alt="" class="slider-btn next-btn">
+            </div>
+        </div>
+    </section>
     <script src="./js/jQuery.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/scrollAnimation.js"></script>
     <script src="./js/smoothScroll.js"></script>
+    <script src="./js/slick.min.js"></script>
 </body>
 </html>

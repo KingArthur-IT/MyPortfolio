@@ -146,3 +146,12 @@ $(document).ready(function () {
         }//for
     }//technologiesAnimationStop
 })//ready
+
+$(document).ready(function () {
+    $('.case__slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        prevArrow: $('.back-btn'),
+        nextArrow: $('.next-btn')
+      });
+})
