@@ -6,12 +6,12 @@
         font-size: 22px
         display: block
         background-color: $third
-        color: #ffffff
         padding: 10px
     &__slider
         width: 80%
         margin: auto
     &__img
+        display: block
 .slider-wrap
     position: relative
 .slider-btn
@@ -30,15 +30,55 @@
         transform: translateX(5px)
 .preview
     display: flex !important
-    justify-content: space-around
+    flex-direction: column
+    position: relative
     &__img
-        width: 37.4%
+        position: absolute
+        right: 0
+        width: 50%
+    &:active, &:focus
+        outline: none
 .cases-list
     list-style: none
     line-height: 1.5
     font-size: 18px
     margin: 0
     padding: 0
+    width: 45%
     &__item
         margin-left: 20px
         margin-top: 3px
+.title-link
+    color: #ffffff
+    text-decoration: none
+.preview-link
+    color: #000
+    font-family: 'Roboto Slab', serif
+    font-weight: 600
+    text-decoration: none
+    padding: 10px
+    &:active, &:focus
+        outline: none
+    &:hover
+        color: $third
+.slick-slide:active, .slick-slide:focus
+    outline: none
+@media screen and ( max-width:  1000px)
+    .case__slider
+        width: 90%
+    .back-btn
+        left: 0
+    .next-btn
+        right: 0
+    .slider-btn
+        height: 30px
+@media screen and ( max-width:  650px)
+    .preview__img
+        visibility: hidden
+    .cases-list
+        width: 100%
+    .slider-btn
+        visibility: hidden
+@media screen and ( max-width: 400px)
+    .case__img
+        display: none

@@ -148,10 +148,28 @@ $(document).ready(function () {
 })//ready
 
 $(document).ready(function () {
-    $('.case__slider').slick({
+    $('#case-slider-1').slick({
         infinite: true,
         slidesToShow: 1,
-        prevArrow: $('.back-btn'),
-        nextArrow: $('.next-btn')
+        prevArrow: $('#slider-1-back-btn'),
+        nextArrow: $('#slider-1-next-btn'),
+        responsive: [
+            {
+                breakpoint: 400,
+                settings: "unslick"
+            }
+        ]    
+    });
+    $('#case-slider-2').slick({
+        infinite: true,
+        slidesToShow: 1,
+        prevArrow: $('#slider-2-back-btn'),
+        nextArrow: $('#slider-2-next-btn'),
+        responsive: [
+            {
+                breakpoint: 400,
+                settings: "unslick"
+            }
+        ]
       });
 })
