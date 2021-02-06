@@ -1,0 +1,49 @@
+.footer
+    padding: 20px 0px 30px
+    &-wrap
+        width: 80%
+        margin: auto
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+    &__info
+        display: flex
+        flex-direction: column
+    &__socials
+.info-name
+    margin-bottom: 5px
+.info-description
+    margin-bottom: 5px
+.socials-img
+    width: 40px
+    margin-left: 10px
+    cursor: pointer
+    padding: 5px
+    transition: transform 0.5s ease
+    &:hover
+        border: 1px solid #000
+        transform: translateY(-30%)
+.footer-end
+    display: flex
+    flex-direction: column
+    width: 80%
+    margin: auto
+    &__line
+        height: 1px
+        width: 100%
+        margin: 10px 0px
+        background-color: #000
+    &__info
+        text-align: center
+@media screen and ( max-width: 800px)
+    .footer
+        &-wrap
+            flex-direction: column-reverse
+        &__info
+            margin: auto
+            text-align: center
+        &__socials
+            margin: auto
+            margin-bottom: 15px
+    .socials-img
+        margin-left: 5px

@@ -219,20 +219,56 @@
         <h2 class="call-to-action">Напишите мне и мы обсудим Ваш проект!</h2>
         <div class="contacts-wrap">
             <ul class = "contacts-list">
-                <li class = "anim-item contacts-list__item"><i class="fab fa-wpforms contact-icon"></i>Заполните форму обратной связи</li>
-                <li class = "anim-item contacts-list__item"><i class="fas fa-at contact-icon"></i>Напишите мне на e-mail</li>
-                <li class = "anim-item contacts-list__item"><i class="fab fa-telegram-plane contact-icon"></i>Напишите мне в телеграм</li>
+                <li class = "anim-item contacts-list__item">
+                    <i class="fab fa-wpforms contact-icon"></i>
+                    Заполните форму обратной связи
+                </li>
+                <li class = "anim-item contacts-list__item">
+                    <i class="fas fa-at contact-icon"></i>
+                    <a href="mailto:ostapt5@gmail.com" class = "contact-link">
+                    Напишите мне на e-mail: ostapt5@gmail.com
+                    </a>
+                </li>
+                <li class = "anim-item contacts-list__item">
+                    <i class="fab fa-telegram-plane contact-icon"></i>
+                    <a href="https://telegram.me/SantasDeer" class = "contact-link">
+                        Напишите мне в телеграм
+                    </a>
+                </li>
             </ul>
             <form action="http://formspree.io/ostapt5@gmail.com" class="contact-form" method="POST">
                 <input type="text" placeholder="Ваше имя" class = "form-elem contact-form__text-input" name="user_name">
-                <input type="email" name="e_mail" id="" class = "form-elem contact-form__text-input" placeholder="Ваш e-mail">
-                <textarea name="" name="message" cols="30" rows="10" class = "form-elem contact-form__msg" placeholder="Опишите здесь Ваш проект или задайте интересующие Вас вопросы"></textarea>
+                <input type="email" class = "form-elem contact-form__text-input" placeholder="Ваш e-mail">
+                <textarea name="message" cols="30" rows="10" class = "form-elem contact-form__msg" placeholder="Опишите здесь Ваш проект или задайте интересующие Вас вопросы"></textarea>
                 <button type="submit" class = "form-elem contact-form__btn"><i class="far fa-envelope contact-icon"></i>Отправить</button>
             </form>
         </div>
     </section>
-    <footer>
-        
+    <footer class = "footer">
+        <div class="footer-wrap">
+            <div class="footer__info">
+                <div class="info-name">Артем Остапенко | Front-end developer</div>
+                <div class="info-description">Создание веб веб-сайтов для Вашего бизнеса.</div>
+                <div class="info-description">(c) 2021</div>
+            </div>
+            <div class="footer__socials">
+                <a href="https://telegram.me/SantasDeer">
+                    <img src="./img/socials/telegram_icon.svg" alt="" class="socials-img">
+                </a>
+                <a href="https://www.instagram.com/king_arthur2017">
+                    <img src="./img/socials/instagram_icon.svg" alt="" class="socials-img">    
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100048966681536">
+                    <img src="./img/socials/facebook_icon.svg" alt="" class="socials-img">
+                </a>
+                <a href="mailto:ostapt5@gmail.com">
+                    <img src="./img/socials/google_icon.svg" alt="" class="socials-img">
+                </a>
+                <a href="https://github.com/KingArthur-IT">
+                    <img src="./img/socials/github_icon.svg" alt="" class="socials-img">
+                </a>
+            </div>
+        </div>
     </footer>
     <script src="./js/jQuery.js"></script>
     <script src="./js/main.js"></script>

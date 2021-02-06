@@ -348,6 +348,11 @@ template {
   word-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 html {
   font-family: "Roboto Slab", serif;
 }
@@ -1316,6 +1321,10 @@ html {
   height: auto;
 }
 
+.contact-link:hover {
+  color: #fff;
+}
+
 @media screen and (max-width: 1100px) {
   .contacts-wrap {
     -webkit-box-pack: justify;
@@ -1366,5 +1375,93 @@ html {
 
   .call-to-action {
     margin: 25px auto;
+  }
+}
+.footer {
+  padding: 20px 0px 30px;
+}
+.footer-wrap {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+.footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.info-name {
+  margin-bottom: 5px;
+}
+
+.info-description {
+  margin-bottom: 5px;
+}
+
+.socials-img {
+  width: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 5px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.socials-img:hover {
+  border: 1px solid #000;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+}
+
+.footer-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.footer-end__line {
+  height: 1px;
+  width: 100%;
+  margin: 10px 0px;
+  background-color: #000;
+}
+.footer-end__info {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .footer-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .footer__info {
+    margin: auto;
+    text-align: center;
+  }
+  .footer__socials {
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .socials-img {
+    margin-left: 5px;
   }
 }/*# sourceMappingURL=style.css.map */
