@@ -9,28 +9,28 @@
     border-radius: 10%
     font-size: 18px
     padding: 25px 15px
-    background-color: #00000060
+    background-color: #fff//#00000060
     transform: translateY(-50px)
     opacity: 0
     transition: all 0.7s ease
+    color: #000
     &.anim-active
         transform: translateY(0px)
         opacity: 1
     &:hover
         transform: translateY(30px)
         background-color: $third
+        color: #fff
     &__number
         padding: 0
         margin: 0
         display: block
         font-size: 24px
         align-self: center
-        color: #fff
         margin-bottom: 20px
     &__title
         padding: 0
         margin: 0
-        color: #fff
         text-align: center
 @media screen and ( max-width: 1200px )
     .work-item

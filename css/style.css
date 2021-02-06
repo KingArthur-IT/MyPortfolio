@@ -361,7 +361,7 @@ html {
 }
 
 .colored-sect {
-  background-color: rgba(193, 200, 199, 0.5);
+  background-color: rgba(193, 200, 199, 0.3);
 }
 
 .title {
@@ -538,6 +538,18 @@ html {
 }
 .menu-link:hover {
   color: #E29049;
+}
+
+.decoration-img {
+  position: absolute;
+}
+
+.decoration-left {
+  left: 20px;
+}
+
+.decoration-right {
+  right: 20px;
 }
 
 .header {
@@ -1106,12 +1118,13 @@ html {
   border-radius: 10%;
   font-size: 18px;
   padding: 25px 15px;
-  background-color: #00000060;
+  background-color: #fff;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
   opacity: 0;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
+  color: #000;
 }
 .work-item.anim-active {
   -webkit-transform: translateY(0px);
@@ -1122,6 +1135,7 @@ html {
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
   background-color: #E29049;
+  color: #fff;
 }
 .work-item__number {
   padding: 0;
@@ -1130,13 +1144,11 @@ html {
   font-size: 24px;
   -ms-flex-item-align: center;
       align-self: center;
-  color: #fff;
   margin-bottom: 20px;
 }
 .work-item__title {
   padding: 0;
   margin: 0;
-  color: #fff;
   text-align: center;
 }
 
