@@ -223,14 +223,17 @@
                 <li class = "anim-item contacts-list__item"><i class="fas fa-at contact-icon"></i>Напишите мне на e-mail</li>
                 <li class = "anim-item contacts-list__item"><i class="fab fa-telegram-plane contact-icon"></i>Напишите мне в телеграм</li>
             </ul>
-            <form action="" class="contact-form">
-                <input type="text" placeholder="Ваше имя" class = "form-elem contact-form__text-input">
-                <input type="email" name="" id="" class = "form-elem contact-form__text-input" placeholder="Ваш e-mail">
-                <textarea name="" id="" cols="30" rows="10" class = "form-elem contact-form__msg" placeholder="Опишите здесь Ваш проект или задайте интересующие Вас вопросы"></textarea>
-                <button type="button" class = "form-elem contact-form__btn"><i class="far fa-envelope contact-icon"></i>Отправить</button>
+            <form action="http://formspree.io/ostapt5@gmail.com" class="contact-form" method="POST">
+                <input type="text" placeholder="Ваше имя" class = "form-elem contact-form__text-input" name="user_name">
+                <input type="email" name="e_mail" id="" class = "form-elem contact-form__text-input" placeholder="Ваш e-mail">
+                <textarea name="" name="message" cols="30" rows="10" class = "form-elem contact-form__msg" placeholder="Опишите здесь Ваш проект или задайте интересующие Вас вопросы"></textarea>
+                <button type="submit" class = "form-elem contact-form__btn"><i class="far fa-envelope contact-icon"></i>Отправить</button>
             </form>
         </div>
     </section>
+    <footer>
+        
+    </footer>
     <script src="./js/jQuery.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/scrollAnimation.js"></script>
