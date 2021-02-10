@@ -1213,6 +1213,10 @@ html {
     -ms-flex-preferred-size: 95%;
         flex-basis: 95%;
   }
+  .work-item:hover {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 .call-to-action {
   text-align: center;
