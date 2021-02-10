@@ -366,7 +366,7 @@ html {
 }
 
 .colored-sect {
-  background-color: rgba(193, 200, 199, 0.3);
+  background-color: rgba(193, 200, 199, 0.2);
 }
 
 .title {
@@ -886,8 +886,8 @@ html {
   min-height: 250px;
 }
 .sites-wrapper__item {
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   border: 1px solid #C1C8C7;
   position: relative;
   background: #E29049;
@@ -960,6 +960,12 @@ html {
   color: #fff;
 }
 
+@media screen and (max-width: 1150px) {
+  .sites-wrapper__item {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+}
 @media screen and (max-width: 850px) {
   .sites-wrapper {
     -webkit-box-orient: vertical;
@@ -1036,6 +1042,10 @@ html {
   outline: none;
 }
 
+.preview-for-mobile {
+  display: none;
+}
+
 .cases-list {
   list-style: none;
   line-height: 1.5;
@@ -1099,6 +1109,12 @@ html {
 
   .slider-btn {
     visibility: hidden;
+  }
+
+  .preview-for-mobile {
+    display: block;
+    width: 90%;
+    margin: auto;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1200,7 +1216,7 @@ html {
 }
 .call-to-action {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .contacts-wrap {
@@ -1217,6 +1233,7 @@ html {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   padding: 0;
+  margin-left: 20px;
 }
 .contacts-list__item {
   margin-bottom: 15px;
@@ -1325,6 +1342,10 @@ html {
   color: #fff;
 }
 
+.contact-img {
+  width: 50%;
+}
+
 @media screen and (max-width: 1100px) {
   .contacts-wrap {
     -webkit-box-pack: justify;
@@ -1348,6 +1369,16 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .contact-img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .call-to-action {
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .contact-form {

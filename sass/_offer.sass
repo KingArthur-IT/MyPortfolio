@@ -4,7 +4,7 @@
     text-align: center
     min-height: 250px
     &__item
-        flex-basis: 33%
+        flex-basis: 25%
         border: 1px solid $first
         position: relative
         background: $third
@@ -52,6 +52,10 @@
     font-weight: normal
     &:hover
         color: #fff
+@media screen and ( max-width:  1150px)
+    .sites-wrapper
+        &__item
+            flex-basis: 30%
 @media screen and ( max-width:  850px)
     .sites-wrapper
         flex-direction: column

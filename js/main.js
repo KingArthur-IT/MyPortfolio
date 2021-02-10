@@ -85,7 +85,8 @@ $(window).resize(function(){
             $('.menu-btn-line:nth-child(2)').css('top', top_start);
             $('.menu-btn-line:nth-child(2)').css('width', width_min);
             $('.menu-btn-line:nth-child(2)').css('left', left_start);
-        }
+    }
+    location.reload();
 });
 
 //Анимация технологий
