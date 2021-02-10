@@ -86,7 +86,10 @@ $(window).resize(function(){
             $('.menu-btn-line:nth-child(2)').css('width', width_min);
             $('.menu-btn-line:nth-child(2)').css('left', left_start);
     }
-    location.reload();
+    //location.reload();
+    let sliders = document.getElementsByClassName('slick-initialized');
+    if (sliders.length == 0)
+        location.reload();
 });
 
 //Анимация технологий
