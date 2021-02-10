@@ -88,8 +88,9 @@ $(window).resize(function(){
     }
     //location.reload();
     let sliders = document.getElementsByClassName('slick-initialized');
-    if (sliders.length == 0)
+    if (sliders.length == 0 && $(window).width() > 400) {
         location.reload();
+    }
 });
 
 //Анимация технологий
