@@ -363,6 +363,7 @@ html {
   height: auto;
   padding: 30px 40px;
   position: relative;
+  overflow: hidden;
 }
 
 .colored-sect {
