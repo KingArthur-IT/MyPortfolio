@@ -16,9 +16,9 @@ $(document).ready(function () {
         {
             textsize = '12px';
         }
-        if ($(this).attr('clicked') == 'false') {
+        if ($(this).attr('data-clicked') == 'false') {
             //Присвоить кнопке аттрибут
-            $(this).attr('clicked', 'true');
+            $(this).attr('data-clicked', 'true');
             //Формируем стрелку
             $(this).children('.menu-btn-line:nth-child(1)').css('transform', 'rotate('+angle+')');
             $(this).children('.menu-btn-line:nth-child(3)').css('transform', 'rotate(-'+angle+')');
@@ -35,7 +35,7 @@ $(document).ready(function () {
         else
         {
             //Присвоить кнопке аттрибут
-            $(this).attr('clicked', 'false');
+            $(this).attr('data-clicked', 'false');
             //Восстанавливаем полоски кнопки
             $(this).children('.menu-btn-line:nth-child(1)').css('transform', 'rotate(0deg)');
             $(this).children('.menu-btn-line:nth-child(3)').css('transform', 'rotate(0deg)');
@@ -99,9 +99,9 @@ $(document).ready(function () {
     let tech_animation = [];
     
     $('.tech-animation__img').on('click', function () {
-        if ($(this).attr('clicked') == 'false')
+        if ($(this).attr('data-clicked') == 'false')
         {
-            $(this).attr('clicked', 'true'); //Присвоить аттрибут кнопке
+            $(this).attr('data-clicked', 'true'); //Присвоить аттрибут кнопке
             fan_animation = document.getElementById("fan").animate(
                 { transform: 'rotate3d(0,0,1,-360deg)' },
                 {
@@ -112,7 +112,7 @@ $(document).ready(function () {
             technologiesAnimationStart();
         }//if
         else {
-            $(this).attr('clicked', 'false');
+            $(this).attr('data-clicked', 'false');
             fan_animation.cancel();
             technologiesAnimationStop();
         }
