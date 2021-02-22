@@ -1,3 +1,8 @@
+#offer
+    background: url(../img/6.jpg) center no-repeat
+    background-size: cover
+    width: 100%
+    background-attachment: fixed
 .sites-wrapper
     display: flex
     justify-content: space-around
@@ -5,7 +10,6 @@
     min-height: 250px
     &__item
         flex-basis: 25%
-        border: 1px solid $first
         position: relative
         background: $third
         display: block
@@ -16,6 +20,8 @@
         padding-top: 40px
         transform: translateY(30px)
         transition: transform 0.5s ease-in-out
+        border-radius: 10px
+        box-shadow: 2px 2px 2px 2px $first
         &:before
             content: ''//attr(data-content)
             position: absolute
@@ -30,6 +36,7 @@
             padding-top: 70px
             color: #070606
             z-index: -1
+            border-radius: 10px
         &:hover::before
             transform: scaleY(0)
         &:hover
@@ -59,3 +66,10 @@
 @media screen and ( max-width:  850px)
     .sites-wrapper
         flex-direction: column
+.paperclip
+    position: absolute
+    top: -10px
+    right: 0px
+    width: 35px
+    height: 35px
+    transform: rotateZ(-45deg)
