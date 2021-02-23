@@ -176,5 +176,17 @@ $(document).ready(function () {
                 settings: "unslick"
             }
         ]
-      });
+    });
+    $('#case-slider-3').slick({
+        infinite: true,
+        slidesToShow: 1,
+        prevArrow: $('#slider-3-back-btn'),
+        nextArrow: $('#slider-3-next-btn'),
+        responsive: [
+            {
+                breakpoint: 400,
+                settings: "unslick"
+            }
+        ]    
+    });
 })
