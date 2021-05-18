@@ -33,7 +33,7 @@ class Particle{
     }
     draw(ctx) {
         ctx.strokeStyle = `hsl(${this.color}, 100%, 20%)`;
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 3;
         ctx.beginPath();            
         ctx.moveTo(this.pos.x, this.pos.y);
         ctx.lineTo(this.pos.x + 1, this.pos.y + 1);
@@ -53,17 +53,13 @@ class Cell{
         let distance = Math.sqrt(dy * dy + dx * dx);
             
         if (distance < forceRadius) {
-            let magnitude = 1 - distance / forceRadius;
-            //this.velocity.x += -velocityStep * magnitude * (mouse.mouseUpPos.x - mouse.mouseDownPos.x);
-            //this.velocity.y +=  velocityStep * magnitude * (mouse.mouseUpPos.y - mouse.mouseDownPos.y);
-            
+            let magnitude = 1 - distance / forceRadius;            
             let mouseMoveX = mouse.mouseUpPos.x - mouse.mouseDownPos.x;
             let mouseMoveY = mouse.mouseUpPos.y - mouse.mouseDownPos.y;
             if (Math.abs(mouseMoveX) > 10.0) { mouseMoveX = Math.sign(mouseMoveX) * 10.0 };
             if (Math.abs(mouseMoveY) > 10.0) { mouseMoveY = Math.sign(mouseMoveY) * 10.0 };
-            this.velocity.x += -velocityStep * magnitude * mouseMoveX; //(mouse.mouseUpPos.x - mouse.mouseDownPos.x);
+            this.velocity.x += -velocityStep * magnitude * mouseMoveX; 
             this.velocity.y += velocityStep * magnitude * mouseMoveY;
-
             this.color = mouse.color;
         }
     }
@@ -78,6 +74,7 @@ class Grid{
         this.cells = [];
     }
     Initialize(w, h, initColor) {
+        if (this.cells.length > 0) this.cells.length = 0;
         this.width  = w;
         this.height = h;
         this.cols_count = parseInt(this.width / this.cell_size);
@@ -142,7 +139,7 @@ class Grid{
             - this.cells[colNext][rowPrev].pressure * 0.5;
         x *= 0.25; y *= 0.25;
         x += this.cells[i][j].velocity.x; y += this.cells[i][j].velocity.y;        
-        x *= 0.99; y *= 0.99;
+        x *= 0.985; y *= 0.985;
         return { x , y };
     }
     colorDiffusion() {
@@ -180,7 +177,7 @@ class Simulation{
         this.ctx = ctx;
         this.cfg = {
             bgColor: '#000',
-            particleColor: 180,
+            particleColor: 60,
             particlesCount: 1000,
             force_radius: 40
         }
@@ -189,7 +186,6 @@ class Simulation{
         this.mouse = new Mouse();        
         this.grid = new Grid();
 
-        this.Initialize();
         this.setCanvasSize();        
         this.Animation();
 
@@ -198,12 +194,14 @@ class Simulation{
         }
     }
     setCanvasSize() {
+        this.Initialize();
         this.grid.width  = this.cnv.width  = innerWidth;
         this.grid.height = this.cnv.height = innerHeight;
-        this.grid.cols_count = this.grid.width / this.grid.cell_size;
-        this.grid.rows_count = this.grid.height / this.grid.cell_size;
+        this.grid.cols_count = parseInt(this.grid.width / this.grid.cell_size);
+        this.grid.rows_count = parseInt(this.grid.height / this.grid.cell_size);
     }
     Initialize() {
+        if (this.particles.length > 0) this.particles.length = 0;
         this.grid.Initialize(innerWidth, innerHeight, this.cfg.particleColor);
         let spaceStep = Math.sqrt(this.grid.width * this.grid.height / this.cfg.particlesCount);
         let x = - spaceStep / 2; let y = spaceStep / 2;
@@ -215,19 +213,15 @@ class Simulation{
             }
             this.particles.push(new Particle(x, y));
         }
-        console.log(this.grid)
     }
     Animation() {
-        //this.ctx.clearRect(0, 0, this.grid.width, this.grid.height);
         this.clearCanvasAlpha(.25);
         this.grid.loop(this.mouse, this.cfg.force_radius);
         this.particles.forEach(i => {
             let col = parseInt(i.pos.x / this.grid.cell_size);
             let row = parseInt(i.pos.y / this.grid.cell_size);
             if (col > parseInt(this.grid.cols_count) - 1) col = parseInt(this.grid.cols_count) - 1;
-            //if (col < 0) col = 0; if (row < 0) row = 0;
             if (row > parseInt(this.grid.rows_count) - 1) row = parseInt(this.grid.rows_count) - 1;
-            //console.log(col, row, this.grid.cols_count, this.grid.rows_count)
             let vel = this.grid.cells[col][row].velocity;
             let c = this.grid.cells[col][row].color;
             i.move(vel.x, vel.y, c, this.grid.width, this.grid.height, this.ctx, true);

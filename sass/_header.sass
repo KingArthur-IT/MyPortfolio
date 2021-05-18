@@ -5,6 +5,7 @@
     padding-bottom: 100px
     padding-top: 100px
     position: relative
+    overflow: hidden
     &__canvas
         position: absolute
         top: 0
@@ -12,6 +13,8 @@
         width: 100%
         min-height: 100vh
         z-index: 0
+        margin: 0
+        padding: 0
     &__main-info
         display: flex
         flex-direction: column
@@ -22,6 +25,7 @@
         margin: auto
         padding: 40px 60px
         z-index: 10
+        user-select: none
     &__title
         display: block
         font-size: 80px
@@ -46,7 +50,7 @@
             opacity: 1
     &__subtitle
         display: block
-        color: $second
+        color: $first
         font-size: 48px
         font-weight: normal
         padding: 0
@@ -61,11 +65,17 @@
             opacity: 1
 
 @media screen and ( max-width: 740px )
-    .header__title
-        font-size: 60px
-    .header__subtitle
-        font-size: 32px
-
+    .header
+        background: url(../img/1.jpg) center no-repeat
+        background-attachment: fixed
+        &__canvas
+            display: none
+        &__title
+            font-size: 60px
+            color: #fff
+        &__subtitle
+            font-size: 32px
+            color: $second
 @media screen and ( max-width: 500px )
     .header
         &__main-info
