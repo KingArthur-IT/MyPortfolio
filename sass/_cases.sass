@@ -1,101 +1,52 @@
-.case
-    margin: 0px
-    font-size: 20px
+#cases
+.case-item
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding: 2% 5%
+    transform: translateX(-100%)
+    transition: all 1.5s ease-in-out
+    &.anim-active
+        transform: translateX(0%)
     &__title
-        text-align: center
-        font-size: 24px
-        display: block
-        background-color: $third
-        padding: 10px
-        width: 80%
-        margin: 30px auto
-        box-shadow: 3px 1px 2px 1px $first
-    &__slider
-        width: 80%
-        margin: auto
+        font-size: 28px
+        margin: 0
+        margin-bottom: 4%
     &__img
-        display: block
-.slider-wrap
-    position: relative
-.slider-btn
-    height: 50px
-    position: absolute
-    top: 42%
-    cursor: pointer
-    transition: transform 0.3s ease-in
-.back-btn
-    left: 5%
-    &:hover
-        transform: translateX(-5px)
-.next-btn
-    right: 5%
-    &:hover
-        transform: translateX(5px)
-.preview
-    display: flex !important
-    flex-direction: column
-    position: relative
-    &__img
-        position: absolute
-        right: 0
-        width: 50%
-    &__text
-        width: 45%
-        line-height: 1.5
-    &:active, &:focus
-        outline: none
-.preview-for-mobile
-    display: none
-.cases-list
-    list-style: none
-    line-height: 1.5
-    font-size: 18px
-    margin: 0
-    padding: 0
-    width: 45%
-    &__item
-        margin-left: 20px
-        margin-top: 3px
-.title-link
-    color: #ffffff
-    text-decoration: none
-.preview-link
-    color: #000
-    font-weight: 600
-    text-decoration: none
-    padding: 10px
-    &:active, &:focus
-        outline: none
-    &:hover
-        color: $third
-.slick-slide:active, .slick-slide:focus
-    outline: none
-@media screen and ( max-width:  1000px)
-    .case__slider
-        width: 90%
-    .back-btn
-        left: 0
-    .next-btn
-        right: 0
-    .slider-btn
-        height: 30px
-    .case
-        &__title
-            width: 90%
-@media screen and ( max-width:  650px)
-    .preview__img
-        visibility: hidden
-    .cases-list
-        width: 100%
-    .preview__text
-        width: 100%
+        flex-basis: 33%
+        width: 33%
+        overflow: hidden
+        & img
+            width: 100%
+            border-radius: 10px
+            height: 100%
+            opacity: 0
+            transform: scale(2)
+            transition: all 1.5s ease-in-out
+            transition-delay: 1.5s
+            &.anim-active
+                opacity: 1
+                transform: scale(1)
+    &__description
         font-size: 18px
-    .slider-btn
-        visibility: hidden
-    .preview-for-mobile
+        flex-basis: 60%
+    &__text
+        margin: 0
+        line-height: 1.5
+        margin-bottom: 1%
+    &__link
+        margin-top: 2%
+        cursor: pointer
         display: block
-        width: 90%
-        margin: auto
-@media screen and ( max-width: 400px)
-    .case__img
-        display: none
+        font-weight: bold
+        &:hover
+            color: $third
+.case-list
+    margin: 0
+    margin-bottom: 1%
+    &__item
+        margin-bottom: 1%
+        line-height: 1.25
+        list-style: none
+    &__icon
+        margin-right: 5px
