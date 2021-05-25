@@ -215,7 +215,7 @@ class Simulation{
         }
     }
     Animation() {
-        this.clearCanvasAlpha(.25);
+        this.clearCanvasAlpha(.1);
         this.grid.loop(this.mouse, this.cfg.force_radius);
         this.particles.forEach(i => {
             let col = parseInt(i.pos.x / this.grid.cell_size);
