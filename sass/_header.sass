@@ -1,15 +1,21 @@
 .header
     width: 100%
     min-height: 100vh
-    //height: auto
     font-family: 'Russo One', sans-serif
     padding-bottom: 100px
     padding-top: 100px
-    background: url(../img/1.jpg) center no-repeat
-    background-size: cover
-    width: 100%
-    background-attachment: fixed
+    position: relative
     overflow: hidden
+    &__canvas
+        position: absolute
+        top: 0
+        background-color: #000
+        width: 100%
+        min-height: 100vh
+        z-index: 0
+        margin: 0
+        padding: 0
+        cursor: crosshair
     &__main-info
         display: flex
         flex-direction: column
@@ -19,6 +25,8 @@
         max-width: 740px
         margin: auto
         padding: 40px 60px
+        z-index: 10
+        user-select: none
     &__title
         display: block
         font-size: 80px
@@ -27,6 +35,7 @@
         text-transform: uppercase
         padding: 0
         margin: 0
+        z-index: 10
     &__line
         display: block
         background-color: $third
@@ -37,11 +46,12 @@
         margin-bottom: 15px
         opacity: 0
         transition: all 1.2s ease-in-out
+        z-index: 10
         &.anim-active
             opacity: 1
     &__subtitle
         display: block
-        color: $second
+        color: $first
         font-size: 48px
         font-weight: normal
         padding: 0
@@ -50,16 +60,34 @@
         opacity: 0
         transition: all 1s ease-in-out
         transition-delay: 1.2s
+        z-index: 10
         &.anim-active
             transform: translateY(0px)
             opacity: 1
-
+@media screen and ( min-width: 1600px )
+    .header
+        &__main-info
+            margin-top: 2%
+            max-width: 1440px
+        &__title
+            font-size: 160px
+        &__line
+            width: 800px
+            max-width: 800px
+        &__subtitle
+            font-size: 72px
 @media screen and ( max-width: 740px )
-    .header__title
-        font-size: 60px
-    .header__subtitle
-        font-size: 32px
-
+    .header
+        background: url(../img/1.jpg) center no-repeat
+        background-attachment: fixed
+        &__canvas
+            display: none
+        &__title
+            font-size: 60px
+            color: #fff
+        &__subtitle
+            font-size: 32px
+            color: $second
 @media screen and ( max-width: 500px )
     .header
         &__main-info

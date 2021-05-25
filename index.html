@@ -8,21 +8,6 @@
     <link rel="stylesheet" href="./css/fontawesome/all.min.css">
     <link rel="stylesheet" href="./css/slick.css">
     <title>Portfolio | Artem Ostapenko</title>
-    <style>
-        .header
-        {
-            width: 100%;
-            min-height: 100vh;            
-            font-family: 'Russo One', sans-serif;
-            padding-bottom: 100px;
-            padding-top: 100px;
-            background: url(./img/1.jpg) center no-repeat;
-            background-size: cover;
-            width: 100%;
-            background-attachment: fixed;
-            overflow: hidden;
-        }
-    </style>
 </head>
 <body>
     <div class="nav-bar">
@@ -39,12 +24,12 @@
         </nav>
     </div>
     <header class = "header">
+        <canvas class="header__canvas" id="header-canvas"></canvas>
         <div class = "header__main-info">
             <h1 class = "header__title">Артем Остапенко</h1>
             <div class = "anim-item header__line"></div>
             <h2 class = "anim-item header__subtitle">Сайт-портфолио <br> веб-разработчика</h2>
-        </div>
-       
+        </div>       
     </header>
     <section class = "section about-me-sect" id = "about-me">
         <h2 class = "title">Обо мне</h2>
@@ -156,153 +141,142 @@
     <!--Cases-->
     <section class="section" id = "cases">
         <h2 class="title">Последние проекты</h2>
-        <div class="anim-item title-underline"></div>    
-        <!--KVPM-->    
-        <div class="case">
-            <h3 class="case__title">
-                <a href="https://kvpm.pstu.edu" class="title-link">
-                    [ Сайт кафедры высшей и прикладной математики ГВУЗ “ПГТУ” ]
-                </a>
-            </h3>
-            <div class="slider-wrap">
-                <img src="./img/pstu-preview/kvpm-0.jpg" alt="kvpm-0" class="preview-for-mobile">
-                <div class="case__slider" id = "case-slider-1">   
-                    <div class = "preview">
-                        <p class="preview__text">
-                            <strong>Исходные данные:</strong> тексты и картинки.
-                        </p>
-                        <p>
-                            <strong>Объем выполненной работы:</strong>
-                            <ul class="cases-list">
-                                <li class="cases-list__item">
-                                    <i class="fas fa-project-diagram list-icon"></i>
-                                    прототипирование сайта: создание схемы расположения элементов, картинок, текстов;
-                                </li>
-                                <li class="cases-list__item">
-                                    <i class="fas fa-brush list-icon"></i>подбор цветов и шрифтов;
-                                </li>
-                                <li class="cases-list__item">
-                                    <i class="fas fa-code list-icon"></i>кроссбраузерная верстка (HTML+BEM+CSS+SASS);
-                                </li>
-                                <li class="cases-list__item">
-                                    <i class="fas fa-code-branch list-icon"></i>
-                                    адаптивность под все типы экранов (ПК, планшеты, мобильные телефоны)
-                                    и программирование интерактивных элементов;
-                                </li>
-                                <li class="cases-list__item">
-                                    <i class="fab fa-wordpress list-icon"></i>
-                                    посадка на систему управления контентом Wordpress.
-                                </li>
-                            </ul>
-                        </p>
-                        <p class="preview__text">
-                            <strong>Результат работы:</strong> 
-                            адаптивный и кроссбраузерный сайт, управляемый на Wordpress.
-                        </p>                        
-                        <a href="https://kvpm.pstu.edu" class = "preview-link">Перейти на сайт</a>
-                        <img src="./img/pstu-preview/kvpm-0.jpg" alt="kvpm-0" class="preview__img">                    
-                    </div>          
-                    <img src="./img/pstu-preview/kvpm-1.jpg" alt="kvpm-1" class = "case__img">
-                    <img src="./img/pstu-preview/kvpm-2.jpg" alt="kvpm-2" class = "case__img">
-                    <img src="./img/pstu-preview/kvpm-3.jpg" alt="kvpm-3" class = "case__img">
-                    <img src="./img/pstu-preview/kvpm-4.jpg" alt="kvpm-4" class = "case__img">
-                    <img src="./img/pstu-preview/kvpm-5.jpg" alt="kvpm-5" class = "case__img">
-                    <img src="./img/pstu-preview/kvpm-6.gif" alt="kvpm-6" class="case__img">
-                    <img src="./img/pstu-preview/kvpm-7.gif" alt="kvpm-7" class="case__img">
-                </div>
-                <img src="./img/back.png" alt="" class="slider-btn back-btn" id = "slider-1-back-btn">
-                <img src="./img/next.png" alt="" class="slider-btn next-btn" id = "slider-1-next-btn">
-                
-            </div>
-        </div>
+        <div class="anim-item title-underline"></div>  
         <!--DoSport-->
-        <div class="case">
-            <h3 class="case__title">
-                <a href="https://kingarthur-it.github.io/FindSport/" class="title-link">
-                    [ Верстка сайта спортивных площадок ]
+        <div class="case-item anim-item">
+            <div class="case-item__img">
+                <img src="./img/dosport-preview/dosport-0.jpg" alt="dosport-0" class="anim-item">
+            </div>
+            <div class="case-item__description">
+                <h3 class="case-item__title">&lt; Верстка сайта спортивных площадок /&gt;</h3>
+                <p class="case-item__text">
+                    <strong>Исходные данные:</strong> дизайн-макет в Figma.
+                </p>
+                <p class="case-item__text">
+                    <strong>Объем выполненной работы:</strong>
+                <ul class="case-list">
+                    <li class="case-list__item">
+                        <i class="fas fa-code case-list__icon"></i>кроссбраузерная верстка HTML5+BEM+CSS3(SASS);
+                    </li>
+                    <li class="case-list__item">
+                        <i class="fas fa-code-branch case-list__icon"></i>
+                        адаптивность под все типы экранов (ПК, планшеты, мобильные телефоны)
+                        и программирование интерактивных элементов: кнопки, слайдер;
+                    </li>
+                </ul>
+                </p>
+                <p class="case-item__text">
+                    <strong>Результат работы:</strong>
+                    адаптивная и кроссбраузерная верстка сайта.
+                </p>
+                <a href="https://kingarthur-it.github.io/FindSport/" class="case-item__link">
+                    <i class="far fa-eye case-list__icon"></i>Перейти на сайт
                 </a>
-            </h3>
-            <div class="slider-wrap">
-                <img src="./img/dosport-preview/dosport-0.jpg" alt="dosport-0" class="preview-for-mobile">
-                <div class="case__slider" id="case-slider-3">
-                    <div class="preview">
-                        <p class="preview__text">
-                            <strong>Исходные данные:</strong> дизайн-макет в Figma.
-                        </p>
-                        <p>
-                            <strong>Объем выполненной работы:</strong>
-                            <ul class="cases-list">
-                                <li class="cases-list__item">
-                                    <i class="fas fa-code list-icon"></i>кроссбраузерная верстка (HTML+BEM+CSS+SASS);
-                                </li>
-                                <li class="cases-list__item">
-                                    <i class="fas fa-code-branch list-icon"></i>
-                                    адаптивность под все типы экранов (ПК, планшеты, мобильные телефоны)
-                                    и программирование интерактивных элементов: кнопки, слайдер;
-                                </li>
-                            </ul>
-                        </p>
-                        <p class="preview__text">
-                            <strong>Результат работы:</strong>
-                            адаптивная и кроссбраузерная верстка.
-                        </p>
-                        <a href="https://kingarthur-it.github.io/FindSport/" class="preview-link">Перейти на сайт</a>
-                        <img src="./img/dosport-preview/dosport-0.jpg" alt="dosport-0" class="preview__img">
-                    </div>
-                    <img src="./img/dosport-preview/dosport-1.jpg" alt="dosport-1" class="case__img">
-                    <img src="./img/dosport-preview/dosport-2.jpg" alt="dosport-2" class="case__img">
-                    <img src="./img/dosport-preview/dosport-3.jpg" alt="dosport-3" class="case__img">
-                    <img src="./img/dosport-preview/dosport-4.jpg" alt="dosport-4" class="case__img">
-                    <img src="./img/dosport-preview/dosport-5.jpg" alt="dosport-5" class="case__img">
-                    <img src="./img/dosport-preview/dosport-6.jpg" alt="dosport-6" class="case__img">
-                </div>
-                <img src="./img/back.png" alt="" class="slider-btn back-btn" id="slider-3-back-btn">
-                <img src="./img/next.png" alt="" class="slider-btn next-btn" id="slider-3-next-btn">
+            </div>
+        </div>  
+        <!--Swipping mesh-->
+        <div class="case-item anim-item">
+            <div class="case-item__img">
+                <img src="./img/swippingMesh-preview/swippingMesh-0.jpg" alt="swippingMesh-0" class="anim-item">
+            </div>
+            <div class="case-item__description">
+                <h3 class="case-item__title">{ Интерактивная анимация движения частиц }</h3>
+                <p class="case-item__text">
+                    <strong>Исходные данные:</strong> техническое задание о разроботке анимации,
+                    которая имитирует движение жидкости.
+                </p>
+                <p class="case-item__text">
+                    <strong>Объем выполненной работы:</strong>
+                <ul class="case-list">
+                    <li class="case-list__item">
+                        <i class="fas fa-code-branch case-list__icon"></i>Создание классовой структуры для описания системы частиц и программирования
+                        её движения на чистом JavaScript (без использования любых сторонних библиотек).
+                        Для устранения задержки визуализации при большом количестве частиц,
+                        их прорисовка реализована при помощи WebGL API.
+                    </li>
+                </ul>
+                </p>
+                <p class="case-item__text">
+                    <strong>Результат работы:</strong>
+                    Браузерное решение для интерактивного взаимодействия с системой частиц, которая
+                    имитирует движение жидкости.
+                </p>
+                <a href="https://kingarthur-it.github.io/SwipingMesh/" class="case-item__link">
+                    <i class="far fa-eye case-list__icon"></i>Перейти на сайт
+                </a>
             </div>
         </div>
-        <!--Swipping mesh-->
-        <div class="case">
-            <h3 class="case__title">
-                <a href="https://kingarthur-it.github.io/SwipingMesh/" class="title-link">
-                    [ Интерактивная анимация движения частиц ]
+        <!--KVPM-->
+        <div class="case-item anim-item">
+            <div class="case-item__img">
+                <img src="./img/pstu-preview/kvpm-0.jpg" alt="kvpm-0" class="anim-item">
+            </div>
+            <div class="case-item__description">
+                <h3 class="case-item__title">[ Сайт кафедры высшей и прикладной математики ГВУЗ “ПГТУ” ]</h3>
+                <p class="case-item__text">
+                    <strong>Исходные данные:</strong> тексты, картинки и пожелания.
+                </p>
+                <p class="case-item__text">
+                    <strong>Объем выполненной работы:</strong>
+                <ul class="case-list">
+                    <li class="case-list__item">
+                        <i class="fas fa-project-diagram case-list__icon"></i>
+                        прототипирование сайта: создание схемы расположения элементов, картинок, текстов;
+                    </li>
+                    <li class="case-list__item">
+                        <i class="fas fa-brush case-list__icon"></i>подбор цветов и шрифтов;
+                    </li>
+                    <li class="case-list__item">
+                        <i class="fas fa-code case-list__icon"></i>кроссбраузерная верстка (HTML+BEM+CSS+SASS);
+                    </li>
+                    <li class="case-list__item">
+                        <i class="fas fa-code-branch case-list__icon"></i>
+                        адаптивность под все типы экранов (ПК, планшеты, мобильные телефоны)
+                        и программирование интерактивных элементов;
+                    </li>
+                    <li class="case-list__item">
+                        <i class="fab fa-wordpress case-list__icon"></i>
+                        посадка на систему управления контентом Wordpress.
+                    </li>
+                </ul>
+                </p>
+                <p class="case-item__text">
+                    <strong>Результат работы:</strong>
+                    адаптивный и кроссбраузерный сайт, управляемый на Wordpress.
+                </p>
+                <a href="https://kvpm.pstu.edu" class="case-item__link">
+                    <i class="far fa-eye case-list__icon"></i>Перейти на сайт
                 </a>
-            </h3>
-            <div class="slider-wrap">
-                <img src="./img/swippingMesh-preview/swippingMesh-0.jpg" alt="swippingMesh-0" class="preview-for-mobile">
-                <div class="case__slider" id = "case-slider-2">
-                    <div class="preview">
-                        <p class="preview__text">
-                            <strong>Исходные данные:</strong> техническое задание о разроботке анимации, 
-                            которая имитирует движение жидкости.
-                        </p>
-                        <p>
-                            <strong>Объем выполненной работы:</strong>
-                            <ul class="cases-list">
-                                <li class="cases-list__item">
-                                    <i class="fas fa-code-branch list-icon"></i>
-                                    Создание классовой структуры для описания системы частиц и программирования 
-                                    её движения на чистом JavaScript (без использования любых сторонних библиотек). 
-                                    Для устранения задержки визуализации при большом количестве частиц, 
-                                    их прорисовка реализована при помощи WebGL API.
-                                    Система частиц взаимодействует как с мышкой для десктопной работы, так и с сенсорным 
-                                    экраном для телефонов и планшетов. 
-                                </li>
-                            </ul>
-                        </p>
-                        <p class="preview__text">
-                            <strong>Результат работы:</strong>
-                            Браузерное решение для интерактивного взаимодействия с системой частиц, которая 
-                            имитирует движение жидкости.
-                        </p>
-                        <a href="https://kingarthur-it.github.io/SwipingMesh/" class="preview-link">Перейти на сайт</a>
-                        <img src="./img/swippingMesh-preview/swippingMesh-0.jpg" alt="swippingMesh-0" class="preview__img">
-                    </div>
-                    <img src="./img/swippingMesh-preview/swippingMesh-1.jpg" alt="swippingMesh-1" class="case__img">
-                    <img src="./img/swippingMesh-preview/swippingMesh-2.jpg" alt="swippingMesh-2" class="case__img">
-                    <img src="./img/swippingMesh-preview/swippingMesh-3.gif" alt="swippingMesh-3" class="case__img">
-                </div>
-                <img src="./img/back.png" alt="" class="slider-btn back-btn" id = "slider-2-back-btn">
-                <img src="./img/next.png" alt="" class="slider-btn next-btn" id = "slider-2-next-btn">
+            </div>
+        </div>
+        <!--FluidTextures-->
+        <div class="case-item anim-item">
+            <div class="case-item__img">
+                <img src="./img/fluidTextures-preview/Textures-Preview-0.jpg" alt="Textures-0" class="anim-item">
+            </div>
+            <div class="case-item__description">
+                <h3 class="case-item__title">// Интерактивная система по моделированию течений жидкости</h3>
+                <p class="case-item__text">
+                    <strong>Исходные данные:</strong> численные схемы.
+                </p>
+                <p class="case-item__text">
+                    <strong>Объем выполненной работы:</strong>
+                <ul class="case-list">
+                    <li class="case-list__item">
+                        <i class="fas fa-code-branch case-list__icon"></i>
+                        Создание классовой структуры проекта, программирование алгоритма и написание шейдерных 
+                        програм для моделирования течения жидкости и обтеканий тел с использованием текстур. 
+                        Проект написан на чистом JavaScript и WebGL API (без использования любых сторонних библиотек).
+                    </li>
+                </ul>
+                </p>
+                <p class="case-item__text">
+                    <strong>Результат работы:</strong>
+                    Интерактивная система для моделирования течений жидкостей.
+                </p>
+                <a href="https://kingarthur-it.github.io/SwipingFluidTextures/" class="case-item__link">
+                    <i class="far fa-eye case-list__icon"></i>Перейти на сайт
+                </a>
             </div>
         </div>
     </section>
@@ -392,6 +366,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/animation.js"></script>
     <script src="./js/jQuery.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/scrollAnimation.js"></script>

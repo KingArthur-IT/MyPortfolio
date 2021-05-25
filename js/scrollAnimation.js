@@ -18,7 +18,7 @@ if (animItems.length > 0) {
             {
                 item.classList.add('anim-active');
             } else {
-                item.classList.remove('anim-active');
+                //item.classList.remove('anim-active');
             }
         }
     }//function
