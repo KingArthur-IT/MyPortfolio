@@ -19,7 +19,6 @@
         & img
             width: 100%
             border-radius: 10px
-            height: 100%
             opacity: 0
             transform: scale(2)
             transition: all 1.5s ease-in-out
@@ -50,3 +49,36 @@
         list-style: none
     &__icon
         margin-right: 5px
+@media screen and ( max-width: 1200px )
+    .case-item
+        &__img
+            flex-basis: 40%
+            width: 40%
+        &__description
+            flex-basis: 55%
+@media screen and ( max-width: 1000px )
+    .case-item
+        flex-direction: column
+        &__img
+            flex-basis: 100%
+            width: 50%
+            margin: auto
+            margin-bottom: 2%
+        &__description
+            flex-basis: 100%
+            text-align: center
+            margin-top: 1%
+            margin-bottom: 1%
+    .case-list
+        padding: 0
+        &__item
+            text-align: justify
+@media screen and ( max-width: 750px )
+    .case-item
+        &__img
+            width: 70%
+@media screen and ( max-width: 550px )
+    .case-item
+        padding: 2% 0%
+        &__img
+            width: 90%
