@@ -85,7 +85,7 @@
         <img src="./img/decoration-offer-right.svg" alt="" class="decoration-img decoration-right">
         <h2 class="title">Что я могу Вам предложить?</h2>
         <div class="anim-item title-underline"></div>
-        <h3 class="wrapper-title">Создание веб-сайтов различной сложности</h3>
+        <h3 class="wrapper-title">Создание веб-сайтов и веб-приложений</h3>
         <div class="sites-wrapper">
             <div class="anim-item sites-wrapper__item">
                 <img src="./img/paperclip.svg" class="paperclip">                
@@ -105,14 +105,14 @@
             </div>
             <div class="anim-item sites-wrapper__item">
                 <img src="./img/paperclip.svg" class="paperclip">
-                <div class="item-title">Доработка сайта</div>
+                <div class="item-title">3D сцены</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
-                    Исправление багов, добавление фич и прочих Ваших «хотелок».
+                    Создание 2D и 3D сцен, симуляций, анимаций или демонстраций на основе JS, WebGL, Three.js.
                 </p>
             </div>
         </div>
-        <h3 class="wrapper-title">Что включает в себя сайт?</h3>
+        <h3 class="wrapper-title">Что включает в себя продакшн продукта?</h3>
         <div class="sites-wrapper">
             <div class="anim-item sites-wrapper__item">
                 <img src="./img/paperclip.svg" class="paperclip">
@@ -127,7 +127,7 @@
                 <div class="item-title">Кроссбраузерность</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
-                    Ваш сайт будет правильно отображаться во всех современных браузерах.
+                    Ваш сайт будет правильно отображаться во всех современных браузерах и на различных операционных системах.
                 </p>
             </div>
             <div class="anim-item sites-wrapper__item">
@@ -135,7 +135,8 @@
                 <div class="item-title">Анимация</div>
                 <div class="item-underline"></div>
                 <p class="item-description">
-                    Анимированные элементы сайта повышают доверие потенциальных клиентов к Вашем бизнесу. А доверие приносит прибыль!
+                    Анимации, интересные итерактивные элементы, 3D модели на сайте повышают интерес к вашему продукту и 
+                    доверие потенциальных клиентов к Вашем бизнесу. А доверие приносит прибыль!
                 </p>
             </div>
         </div>
@@ -144,13 +145,76 @@
     <section class="section" id = "cases">
         <h2 class="title">Последние проекты</h2>
         <div class="anim-item title-underline"></div>  
+        <!--SwapPandas-->
+        <div class="case-item anim-item">
+            <div class="case-item__img">
+                <img src="./img/previews/pandaSwap.jpg" alt="pandaSwap" class="anim-item">
+            </div>
+            <div class="case-item__description">
+                <h3 class="case-item__title"><i class="fas fa-paw case-list__icon"></i></i>Создание главного экрана с интерактивной анимацией</h3>
+                <p class="case-item__text">
+                    <strong>Исходные данные:</strong> Макет главного экрана в Figma.
+                </p>
+                <p class="case-item__text">
+                    <strong>Объем выполненной работы:</strong>
+                <ul class="case-list">
+                    <li class="case-list__item">
+                        <i class="fas fa-code case-list__icon"></i>кроссбраузерная верстка (HTML+BEM+CSS+SASS), создание адаптивности 
+                        под все типы экранов (ПК, планшеты, мобильные телефоны);
+                    </li>
+                    <li class="case-list__item">
+                        <i class="fas fa-code-branch case-list__icon"></i>
+                        программирование движения интерактивных элементов: панд и бамбука на JavaScript;
+                    </li>
+                </ul>
+                </p>
+                <p class="case-item__text">
+                    <strong>Результат работы:</strong>
+                    Главный экран с интерактивными элементами.
+                </p>
+                <a href="https://kingarthur-it.github.io/PandaSwap/" class="case-item__link">
+                    <i class="far fa-eye case-list__icon"></i>Перейти на сайт
+                </a>
+            </div>
+        </div>
+        <!--MedSimulation Calibration-->
+        <div class="case-item anim-item">
+            <div class="case-item__img">
+                <img src="./img/previews/Calibration.jpg" alt="Calibration" class="anim-item">
+            </div>
+            <div class="case-item__description">
+                <h3 class="case-item__title"><i class="fas fa-user-md case-list__icon"></i>Веб симуляция калибровки медицинского оборудования</h3>
+                <p class="case-item__text">
+                    <strong>Исходные данные:</strong> 3D модель устройства, картинка с траекторией калибровки, фон.
+                </p>
+                <p class="case-item__text">
+                    <strong>Объем выполненной работы:</strong>
+                <ul class="case-list">
+                    <li class="case-list__item">
+                        <i class="fas fa-code-branch case-list__icon"></i>
+                        Создана 3D сцена с устройством и три уровня для обучения медицинского персонала: тренировка, практика и экзамен. 
+                        Устройство жестко зафиксировано в нижней точке и свободно двигается в верхней, описывая некоторую траекторию движения. Цель симулятора - 
+                        натренировать медицинского работника повторять эту траеторию с требуемой точностью. Правильная траектория парсится из картинки и используется 
+                        для тренировки и прохождения экзамена. Для создания проекта использовалась библиотека Three.js (WebGL) и JavaScript.
+                    </li>
+                </ul>
+                </p>
+                <p class="case-item__text">
+                    <strong>Результат работы:</strong>
+                    Обучающая веб симуляция.
+                </p>
+                <a href="https://kingarthur-it.github.io/MedSimulation/" class="case-item__link">
+                    <i class="far fa-eye case-list__icon"></i>Перейти на сайт
+                </a>
+            </div>
+        </div>
         <!--FluidTextures-->
         <div class="case-item anim-item">
             <div class="case-item__img">
                 <img src="./img/previews/Textures-Preview-0.jpg" alt="Textures-0" class="anim-item">
             </div>
             <div class="case-item__description">
-                <h3 class="case-item__title">// Интерактивная система моделирования течений жидкости</h3>
+                <h3 class="case-item__title"><i class="fab fa-confluence case-list__icon"></i> Интерактивная система моделирования течений жидкости</h3>
                 <p class="case-item__text">
                     <strong>Исходные данные:</strong> численные схемы.
                 </p>
@@ -244,7 +308,7 @@
                 <img src="./img/previews/swippingMesh-0.jpg" alt="swippingMesh-0" class="anim-item">
             </div>
             <div class="case-item__description">
-                <h3 class="case-item__title">{ Интерактивная анимация движения частиц }</h3>
+                <h3 class="case-item__title"><i class="fab fa-sith case-list__icon"></i> Интерактивная анимация движения частиц</h3>
                 <p class="case-item__text">
                     <strong>Исходные данные:</strong> техническое задание о разроботке анимации,
                     которая имитирует движение жидкости.
@@ -276,7 +340,7 @@
                 <img src="./img/previews/kvpm-0.jpg" alt="kvpm-0" class="anim-item">
             </div>
             <div class="case-item__description">
-                <h3 class="case-item__title">[ Сайт кафедры высшей и прикладной математики ГВУЗ “ПГТУ” ]</h3>
+                <h3 class="case-item__title"><i class="fas fa-atlas case-list__icon"></i> Сайт кафедры высшей и прикладной математики ГВУЗ “ПГТУ”</h3>
                 <p class="case-item__text">
                     <strong>Исходные данные:</strong> тексты, картинки и пожелания.
                 </p>
