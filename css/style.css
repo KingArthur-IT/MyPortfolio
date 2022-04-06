@@ -774,7 +774,9 @@ html {
 .about-me-list__item:nth-child(3) {
   margin-left: 80px;
 }
-
+.about-me-list__item:nth-child(4) {
+  margin-left: 120px;
+}
 .tech-list {
   display: block;
   -ms-flex-preferred-size: 90%;
